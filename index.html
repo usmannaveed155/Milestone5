@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+    <h1>Shareable Resume Builder</h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend>Personal Information </legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education  </legend>
+            <label for="education">Education:</label>
+            <textarea name="skills" id="education" placeholder="Enter Your Education" required rows="2"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills </legend>
+            <label for="skills">Skills:</label>
+            <textarea name="skills" id="skills" placeholder="Enter Your Skills" required rows="2"></textarea>
+        </fieldset>
+        <button type="submit" id="generate-resume">Generate Resume</button>
+    </form> 
+
+    <div class="resume-section">
+        <h2>Shareable Resume  </h2>
+        <div id="resume" contenteditable=""></div>
+    </div>
+    <button id="generate-pdf">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="index.js"></script>   
+</body>
+</html>
